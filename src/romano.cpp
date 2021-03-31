@@ -9,11 +9,12 @@ int ConverterAlgarismo(char algarismo) {
     switch (algarismo) {
     case 'I':
         return 1;
-        break;
     case 'V':
         return 5;
     case 'X':
         return 10;
+    case 'L':
+        return 50;
     default:
         return -1;
     }
