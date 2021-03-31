@@ -2,5 +2,19 @@ Para compilar os arquivos, é necessário entrar no diretório /src pelo termina
     make
 
 Caso seja desejado checar os arquivos com o cpplint, cppcheck e checar o se existem problemas relacionados a memória no programa, basta rodar:
-    make romano .cppcheck .cpplint .valgrind
+    make romano .cpplint .cppcheck .valgrind
 esse comando também efetuará a compilação dos códigos.
+
+O programa foi desenvolvido usando o catch para realizar os testes com a biblioteca "catch.hpp"
+
+
+No arquivo romano.cpp estão presentes as implementações das funções:
+EntradaValida - Verifica se a string passada como parâmetro é um número romano válido;
+ConverterAlgarismo - Transforma o caractere em romano pelo seu valor correspondente em decimal;
+RomanosParaDecimal - Contém a implementação final que usa as duas funções anteriores para converter a string de entrada para decimal.
+
+
+No arquivo testa_romano.cpp foram efetuados 3 blocos de casos de teste:
+O primeiro verifica se a função ConverterAlgarismo está funcionando;
+O segundo verifica se a string de entrada é válida ou não, fazendo as verificações: caractere não romano digitado, caractere romano em letra minúscula, string excede tamanho máximo(30 caracteres), mais de 3 caracteres iguais consecutivos, letras consecutivas não permitidas e valor excedendo 3000;
+O último bloco verifica se o resultado da função está correto para alguns valores escolhidos empiricamente.
