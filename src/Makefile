@@ -1,5 +1,5 @@
 IDIR =../include
-CC=g++
+CC=g++ -std=c++11
 CFLAGS=-I$(IDIR)
 
 ODIR=../obj
@@ -26,7 +26,7 @@ romano: $(OBJ)
 	cppcheck --enable=warning .
 
 .valgrind:
-	valgrind --leak-check=full ./pilha
+	valgrind --leak-check=full ./romano
 	
 .PHONY: clean
 
