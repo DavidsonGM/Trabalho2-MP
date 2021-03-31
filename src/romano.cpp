@@ -3,6 +3,8 @@
 #include "../include/romano.hpp"
 
 bool EntradaValida(std::string entrada) {
+    if (entrada.size() > 30)
+        return false;
     for (int i = 0; i < entrada.size(); i++) {
         if (
             entrada[i] != 'I' && entrada[i] != 'V' && entrada[i] != 'X' &&
