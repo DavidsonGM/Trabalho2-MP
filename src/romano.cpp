@@ -82,7 +82,7 @@ int RomanosParaDecimal(std::string entrada) {
                 i += 2;
             } else {
                 resultado += algarismo_decimal[i];
-                i+=1;
+                i += 1;
             }
         } else {
             resultado += algarismo_decimal[i];
