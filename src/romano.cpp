@@ -1,9 +1,10 @@
 // Copyright 2021 David Mendes
 
 #include "../include/romano.hpp"
+#define MAX_STRING_SIZE 30
 
 bool EntradaValida(std::string entrada) {
-    if (entrada.size() > 30)
+    if (entrada.size() > MAX_STRING_SIZE)
         return false;
     for (int i = 0; i < entrada.size(); i++) {
         if (
@@ -67,5 +68,28 @@ int ConverterAlgarismo(char algarismo) {
 int RomanosParaDecimal(std::string entrada) {
     if (!EntradaValida(entrada))
         return -1;
-    return 1;
+
+    int algarismo_decimal[MAX_STRING_SIZE];
+    for (int i = 0; i < entrada.size(); i++)
+        algarismo_decimal[i] = ConverterAlgarismo(entrada[i]);
+
+    int resultado = 0;
+    int i = 0;
+    while (i < entrada.size()) {
+        if (i < entrada.size() - 1) {
+            if (algarismo_decimal[i] < algarismo_decimal[i + 1]) {
+                resultado += algarismo_decimal[i + 1] - algarismo_decimal[i];
+                i += 2;
+            } else {
+                resultado += algarismo_decimal[i];
+                i+=1;
+            }
+        } else {
+            resultado += algarismo_decimal[i];
+            i += 1;
+        }
+    }
+    if (resultado <= 3000)
+        return resultado;
+    return -1;
 }
