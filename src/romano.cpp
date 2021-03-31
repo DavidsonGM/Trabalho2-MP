@@ -17,6 +17,8 @@ int ConverterAlgarismo(char algarismo) {
         return 50;
     case 'C':
         return 100;
+    case 'D':
+        return 500;
     default:
         return -1;
     }
