@@ -1,0 +1,6 @@
+Para compilar os arquivos, é necessário entrar no diretório /src pelo terminal e rodar o comando
+    make
+
+Caso seja desejado checar os arquivos com o cpplint, cppcheck e checar o se existem problemas relacionados a memória no programa, basta rodar:
+    make romano .cppcheck .cpplint .valgrind
+esse comando também efetuará a compilação dos códigos.
