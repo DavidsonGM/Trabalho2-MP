@@ -6,13 +6,17 @@ bool EntradaValida(std::string entrada) {
 }
 
 int ConverterAlgarismo(char algarismo) {
-    if (algarismo == 'I')
+    switch (algarismo) {
+    case 'I':
         return 1;
-    else if (algarismo == 'V')
+        break;
+    case 'V':
         return 5;
-    else if (algarismo == 'X')
+    case 'X':
         return 10;
-    return -1;
+    default:
+        return -1;
+    }
 }
 
 int RomanosParaDecimal(std::string entrada) {
