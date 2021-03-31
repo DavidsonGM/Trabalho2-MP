@@ -3,6 +3,7 @@
 #include "../include/romano.hpp"
 
 bool EntradaValida(std::string entrada) {
+    return true;
 }
 
 int ConverterAlgarismo(char algarismo) {
@@ -27,4 +28,6 @@ int ConverterAlgarismo(char algarismo) {
 }
 
 int RomanosParaDecimal(std::string entrada) {
+    if (!EntradaValida(entrada))
+        return -1;
 }
