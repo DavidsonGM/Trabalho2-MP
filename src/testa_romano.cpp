@@ -18,10 +18,10 @@ TEST_CASE("Algarismo romano", "[romanos]" ) {
 TEST_CASE("Entrada invalida", "[romanos]") {
     REQUIRE(RomanosParaDecimal("AA") == -1);
     REQUIRE(RomanosParaDecimal("ii") == -1);
-    REQUIRE(RomanosParaDecimal("MMMI") == -1);
     REQUIRE(RomanosParaDecimal("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM") == -1);
     REQUIRE(RomanosParaDecimal("IIII") == -1);
     REQUIRE(RomanosParaDecimal("XM") == -1);
     REQUIRE(RomanosParaDecimal("LL") == -1);
     REQUIRE(RomanosParaDecimal("IL") == -1);
+    REQUIRE(RomanosParaDecimal("MMMI") == -1);
 }
