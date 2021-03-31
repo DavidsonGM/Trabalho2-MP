@@ -19,6 +19,26 @@ bool EntradaValida(std::string entrada) {
             )
             return false;
         }
+        if (i > 0) {
+            switch (entrada[i]) {
+            case 'M':
+            case 'D':
+                if (entrada[i - 1] != 'C' && entrada[i - 1] != 'M')
+                    return false;
+                break;
+            case 'C':
+            case 'L':
+                if (entrada[i - 1] == 'I' || entrada[i - 1] == 'V' ||
+                    entrada[i - 1] == 'L')
+                    return false;
+                break;
+            case 'X':
+            case 'V':
+                if (entrada[i - 1] == 'V')
+                    return false;
+                break;
+            }
+        }
     }
     return true;
 }
