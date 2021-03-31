@@ -6,5 +6,5 @@
 #include "../include/romano.hpp"
 
 TEST_CASE("E algarismo romano", "[romanos]" ) {
-    REQUIRE(ConverterAlgarismo('I') == '1');
+    REQUIRE(ConverterAlgarismo('I') == 1);
 }

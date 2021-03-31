@@ -6,8 +6,10 @@ bool EntradaValida(std::string entrada){
 
 }
 
-int ConverterAlgarismo(char entrada){
-
+int ConverterAlgarismo(char algarismo){
+    if (algarismo == 'I')
+        return 1;
+    return -1;
 }
 
 int RomanosParaDecimal(std::string entrada){
