@@ -12,6 +12,13 @@ bool EntradaValida(std::string entrada) {
             entrada[i] != 'D' && entrada[i] != 'M'
         )
             return false;
+        if (i > 2) {
+            if (
+                entrada[i] == entrada[i - 1] && entrada[i] == entrada[i - 2] &&
+                entrada[i] == entrada[i - 3]
+            )
+            return false;
+        }
     }
     return true;
 }
