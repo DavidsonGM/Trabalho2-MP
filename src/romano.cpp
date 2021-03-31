@@ -10,6 +10,8 @@ int ConverterAlgarismo(char algarismo) {
         return 1;
     else if (algarismo == 'V')
         return 5;
+    else if (algarismo == 'X')
+        return 10;
     return -1;
 }
 
